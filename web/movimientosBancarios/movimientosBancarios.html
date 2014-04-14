@@ -1,1 +1,19 @@
-estas en la pagina {{nombrePagina}}
+        <table class="table table-bordered table-hover">
+            <thead>
+                <td>id</td>
+                <td>nombre</td>
+                <td>codigo</td>
+                <td>acciones</td>
+            </thead>
+        <tbody>
+            <tr ng-repeat="movimiento in movimientos">
+                <td>{{cuenta.idMovimiento}}</td>
+                <td>{{cuenta.nombre}}</td>
+                <td>{{cuenta.codigo}}</td>
+                <td>
+                    <a class="btn btn-info" href="#/movimientosBancarios/editar/{{cuenta.idMovimiento}}">editar</a>
+                    <a class="btn btn-warning" href="#/movimientosBancarios/borrar/{{cuenta.idMovimiento}}">borrar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
