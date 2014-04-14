@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head ng-app="app">
-        <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>empleados</title>
         <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet"></link>
+        <script src="lib/jquery/jquery-2.1.0.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+        <script src="lib/angular/angular-locale_es-es.js"></script>
         <script src="index.js"></script>
-        <script src="/cuentasBancarias/cuentas.js"></script>
-        <script src="/entidadesBancarias/entidades.js"></script>
-        <script src="/movimientosBancarios/movimientos.js"></script>
-        <script src="/sucursalesBancarias/sucursales.js"></script>
+        <script src="cuentasBancarias/cuentas.js"></script>
+        <script src="entidadesBancarias/entidades.js"></script>
+        <script src="movimientosBancarios/movimientos.js"></script>
+        <script src="sucursalesBancarias/sucursales.js"></script>
     </head>
-    <body>
+    <body ng-controller="IndexController">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -24,10 +29,10 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Entidades Bancarias</a></li>
-                        <li><a href="#">Sucursales Bancarias</a></li>
-                        <li><a href="#">Cuentas Bancarias</a></li>
-                        <li><a href="#">Movimientos Bancarios</a></li>
+                        <li><a href="#/entidadesBancarias/entidadesBancarias">Entidades Bancarias</a></li>
+                        <li><a href="#/sucursalesBancarias/sucursalesBancarias">Sucursales Bancarias</a></li>
+                        <li><a href="#/cuentasBancarias/cuentasBancarias">Cuentas Bancarias</a></li>
+                        <li><a href="#/movimientosBancarios/movimientosBancarios">Movimientos Bancarios</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Contacto</a></li>
@@ -37,5 +42,7 @@
                 </div>
             </div>
         </nav>
+        <div class="space"></div>
+        <div class="main" ng-view></div>
     </body>
 </html>

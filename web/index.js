@@ -4,14 +4,13 @@ app.config(function($routeProvider) {
 
     $routeProvider.otherwise(
             {
-                redirectTo: 'index'
+                redirectTo: 'entidadesBancarias'
 
             }
     );
 });
 
 app.controller("IndexController", function($scope){
-    
 
     
 });
